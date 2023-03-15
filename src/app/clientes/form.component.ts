@@ -51,6 +51,7 @@ export class FormComponent {
 
   update():void{
     console.log(this.cliente);
+    this.cliente.facturas = null;
     this.clienteService.update(this.cliente)
     .subscribe( json => { this.router.navigate(['/clientes'])
     Swal.fire('Cliente actualizado', `${json.mensaje}: ${json.cliente.nombre}`, 'success')
