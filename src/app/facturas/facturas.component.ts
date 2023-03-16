@@ -117,7 +117,7 @@ export class FacturasComponent {
   
       this.facturaService.create(this.factura).subscribe(factura => {
         Swal.fire(this.titulo, `Factura ${factura.descripcion} creada con éxito`, 'success');
-        this.router.navigate(['/clientes']);
+        this.router.navigate(['/facturas', factura.id]);
       });
 
       }

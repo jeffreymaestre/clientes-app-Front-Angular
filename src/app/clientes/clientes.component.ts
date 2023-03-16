@@ -16,7 +16,7 @@ export class ClientesComponent {
   paginador: any;
   clienteSeleccionado: Cliente;
 
-  constructor(private clienteService : ClienteService, private activateRoute: ActivatedRoute, private modalService: ModalService, public authService: AuthService){}
+  constructor(private clienteService : ClienteService, private activateRoute: ActivatedRoute, public modalService: ModalService, public authService: AuthService){}
 
   ngOnInit(): void {
     

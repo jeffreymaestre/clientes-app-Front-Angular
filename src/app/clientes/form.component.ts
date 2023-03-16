@@ -38,8 +38,8 @@ export class FormComponent {
     console.log(this.cliente);
     this.clienteService.create(this.cliente).subscribe(
       cliente => {
-        this.router.navigate(['/clientes'])
-        Swal.fire('Nuevo cliente', `El cliente: ${cliente.nombre} ha sido creado con éxito!`, 'success')
+        this.router.navigate(['/clientes']);
+        Swal.fire('Nuevo cliente', `El cliente: ${cliente.nombre} ha sido creado con éxito!`, 'success');
         },
         err => {
           this.errors = err.error.errors as string[];
